@@ -1,9 +1,11 @@
 **Python - if/else, loops, functions**
 
 *Learning Objectives*
+
        At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 *General*
+
        Why indentation is so important in Python
        How to use the if, if ... else statements
        How to use comments
@@ -20,6 +22,7 @@
        What are the arithmetic operators and how to use them
 
 *Requirements*
+
        Python Scripts
        Allowed editors: vi, vim, emacs
        All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.*)
@@ -32,6 +35,7 @@
 
 
 *Tasks*
+
 0. Positive anything is better than negative nothing
 
        This program will assign a random signed number to the variable number each time it is executed. Complete the source code in order to print whether the number stored in the variable number is positive or negative.
