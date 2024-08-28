@@ -1,2 +1,6 @@
 #!/usr/bin/python3
-print("".join(chr(i) for i in range(97, 123)), end="")
+ascii_value = 97
+while ascii_value < 123:
+    form_out = "{0}" .format(chr(ascii_value))
+    print(form_out, end="")
+    ascii_value += 1
