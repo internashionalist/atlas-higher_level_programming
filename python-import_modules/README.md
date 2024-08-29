@@ -3,7 +3,7 @@
 *Learning Objectives*
        At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-*General*
+General
        Why Python programming is awesome
        How to import functions from another file
        How to use imported functions
@@ -15,7 +15,7 @@
 
 *Requirements*
 
-*General*
+General
        Allowed editors: vi, vim, emacs
        All your files will be interpreted/compiled on Ubuntu 22.04 LTS using python3 (version 3.10.*)
        All your files should end with a new line
@@ -97,3 +97,15 @@ Tasks
        You should print one name per line, in alpha order
        You should print only names that do not start with __
        Your code should not be executed when imported
+
+
+
+
+5. Everything can be imported
+
+       Write a program that imports the variable a from the file variable_load_5.py and prints its value.
+
+       You are not allowed to use * for importing or __import__
+       Your code should not be executed when imported
+
+       
