@@ -4,6 +4,7 @@
        At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
 General
+
        Why Python programming is awesome
        How to import functions from another file
        How to use imported functions
@@ -16,6 +17,7 @@ General
 *Requirements*
 
 General
+
        Allowed editors: vi, vim, emacs
        All your files will be interpreted/compiled on Ubuntu 22.04 LTS using python3 (version 3.10.*)
        All your files should end with a new line
@@ -108,4 +110,3 @@ Tasks
        You are not allowed to use * for importing or __import__
        Your code should not be executed when imported
 
-       
