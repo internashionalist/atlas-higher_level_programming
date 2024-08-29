@@ -8,4 +8,3 @@ if __name__ == "__main__":
 
     result = add(a, b)
     print("{0} + {1} = {2}".format(a, b, result))
-    
