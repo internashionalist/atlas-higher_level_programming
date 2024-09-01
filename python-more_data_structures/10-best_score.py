@@ -11,5 +11,5 @@ def best_score(a_dictionary):
         if value > high_score:  # if higher score found
             high_score = value  # update high_score
             winner = key  # that gamer is the winner
-    
+
     return winner  # return gamer with highest score
