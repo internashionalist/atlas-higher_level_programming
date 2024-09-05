@@ -38,7 +38,7 @@ class Square:  # public class
             area of square
         """
         return self.__size**2  # area of square is size squared
-    
+
     def my_print(self):  # public instance method
         """
         prints instance of square using "#" character(s)
