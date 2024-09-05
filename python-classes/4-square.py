@@ -48,7 +48,7 @@ class Square:  # public class
             size of square
         """
         return self.__size  # return size of square
-    
+
     @size.setter
     def size(self, value):  # public instance method
         """
