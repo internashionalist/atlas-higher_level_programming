@@ -23,7 +23,7 @@ class Square:
             position (tuple): tuple of 2 integers - position of the square
 
         raises:
-            TypeError: if size not an integer or position not tuple of 2 integers
+            TypeError: if size not an integer or position not 2 int tuple
             ValueError: if size is negative or position has negative values
         """
         self.size = size
