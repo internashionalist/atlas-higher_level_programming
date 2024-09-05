@@ -5,7 +5,7 @@ this module defines geometric class square
 """
 
 
-class Square:
+class Square:  # public class
     """
     class represents a square
 
@@ -13,7 +13,7 @@ class Square:
         size (int): length of the sides of a square
     """
 
-    def __init__(self, size=0):
+    def __init__(self, size=0):  # public instance method / constructor
         """
         initialize new instance of Square
 
@@ -30,3 +30,11 @@ class Square:
         else:  # assign size to instance
             self.__size = size  # keep size private
 
+    def area(self):  # public instance method
+        """
+        compute area of square
+
+        returns:
+            area of square
+        """
+        return self.__size ** 2  # area of square is size squared
