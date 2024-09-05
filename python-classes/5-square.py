@@ -39,6 +39,17 @@ class Square:  # public class
         """
         return self.__size**2  # area of square is size squared
     
+    def my_print(self):  # public instance method
+        """
+        prints instance of square using "#" character(s)
+        """
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                print()
 
     @property
     def size(self):  # public instance method
