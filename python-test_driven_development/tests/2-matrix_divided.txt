@@ -1,2 +1,53 @@
 # 2-matrix_divided DocTest
 
+
+# Function: matrix_divided()
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# Normal division
+>>> matrix_divided([[4, 5, 6], [7, 8, 9]], 2)
+[[2.0, 2.5, 3.0], [3.5, 4.0, 4.5]]
+
+# Division with floats
+>>> matrix_divided([[1.5, 3.3, 5.25], [2.2, 3.4, 6.2]], 3)
+[[0.5, 1.1, 1.75], [0.73, 1.13, 2.07]]
+
+# div is a string
+>>> matrix_divided([[1, 3, 5], [2, 4, 6]], 'lizard')
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# Non-number values in matrix
+>>> matrix_divided([[1, 'trois', 5], [2, 4, 6]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Division by 0
+>>> matrix_divided([[1, 3, 5], [2, 4, 6]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+# div = float('inf')
+>>> matrix_divided([[1, 3, 5], [2, 4, 50000]], (float('inf')))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+# Rows are of differing lengths
+>>> matrix_divided([[1, 3, 5, 7], [2, 4, 6]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+# Invalid matrix argument
+>>> matrix_divided(None, 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Missing div argument
+>>> matrix_divided ([[1, 3, 5], [2, 4, 6]])
+Traceback (most recent call last):
+    ...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
