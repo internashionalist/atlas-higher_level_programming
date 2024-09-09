@@ -19,7 +19,7 @@ def say_my_name(first_name, last_name=""):
     Returns:
         None
     """
-    # if first_name is not a string
+    # if first_name is not a string or missing
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
 
@@ -33,5 +33,5 @@ def say_my_name(first_name, last_name=""):
             "say_my_name() missing 1 required positional argument: 'first_name'")
 
     # print concatenated string
-    print("My name is {} {}".format(first_name, last_name))
-
+    print(f"My name is {first_name}" if not last_name 
+          else "My name is {first_name} {last_name}")
