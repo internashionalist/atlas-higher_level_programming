@@ -9,7 +9,7 @@ def text_indentation(text):
     """
     Function that prints a text with 2 new lines
     after every ".", "?", and ":" character
-    
+
     Args:
         text (str): text to print
 
@@ -19,4 +19,15 @@ def text_indentation(text):
     Returns:
         None
     """
-    
+
+    # if text is not a string
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+
+    # insert \n\n after . ? and :
+    text = text.replace(". ", ".\n\n")
+    text = text.replace("? ", "?\n\n")
+    text = text.replace(": ", ":\n\n")
+
+    # print text
+    print(text, end="")
