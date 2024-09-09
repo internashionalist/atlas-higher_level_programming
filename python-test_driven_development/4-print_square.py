@@ -29,7 +29,7 @@ def print_square(size):
     
     # if size is 0
     if size == 0:
-        print(0)
+        return
 
     # if no size
     if size == None:
