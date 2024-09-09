@@ -21,6 +21,7 @@ def matrix_divided(matrix, div):
     Returns:
         list:   new matrix with all elements divided by div
     """
+
     # if matrix is not a list of lists of ints/floats
     if (not isinstance(matrix, list) or
         not all(isinstance(row, list) for row in matrix) or
