@@ -34,3 +34,15 @@ TypeError: b must be an integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+
+# adding float('NaN')
+>>> add_integer(3, (float('NaN')))
+Traceback (most recent call last):
+    ...
+ValueError: cannot convert float NaN to integer
+
+# float overflow
+>>> add_integer(5, (1 + (float('inf'))))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer
