@@ -24,10 +24,16 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    # insert \n\n after . ? and :
-    text = text.replace(". ", ".\n\n")
-    text = text.replace("? ", "?\n\n")
-    text = text.replace(": ", ":\n\n")
+    result = ""  # string to store result
+    i = 0  # iterator
+    while i < len(text):  # iterate through text
+        result += text[i]  # add each character to result
+        if text[i] in ".?:":  # if . or ? or :
+            result += "\n\n"  # add 2 new lines
+            i += 1  # move to next character
+            while i < len(text) and text[i] == " ":  # skip spaces
+                i += 1  # move to next character
+            continue
+        i += 1 # move to next character
 
-    # print text
-    print(text, end="")
+    print(result, end="")  # print resulting text and pray
