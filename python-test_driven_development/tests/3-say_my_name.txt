@@ -15,7 +15,7 @@ TypeError: first_name must be a string
 
 # No last_name
 >>> say_my_name('Jonas')
-My name is Jonas
+My name is Jonas 
 
 # No arguments
 >>> say_my_name()
