@@ -1,2 +1,39 @@
 # 4-print_square DocTest
 
+# Function: print_square()
+>>> print_square = __import__('4-print_square').print_square
+
+# Normal integer size
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+# No parameter given
+>>> print_square()
+Traceback (most recent call last):
+    ...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+# Parameter is a float
+>>> print_square(4.5)
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# Parameter is a string
+>>> print_square('lizard')
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
+
+# Size is 0
+>>> print_square(0)
+
+# Parameter is negative
+>>> print_square(-10)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
