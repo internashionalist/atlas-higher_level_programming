@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Function divides all elements of a matrix by div
+2-matrix_divided module
 """
 
 
