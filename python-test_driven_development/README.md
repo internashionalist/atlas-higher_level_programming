@@ -1,6 +1,6 @@
-***Python - Test-Driven Development***
+# Python - Test-Driven Development
 
-**Background Context**
+## Background Context
 
 Important notice on intranet checks for Python projects
 
@@ -12,7 +12,7 @@ Starting from today:
     Don’t trust the user, always think about all possible edge cases
 
 
-**Learning Objectives**
+## Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
@@ -25,9 +25,9 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     How to find edge cases
 
 
-**Requirements**
+## Requirements
 
-*Python Scripts*
+### Python Scripts
 
     Allowed editors: vi, vim, emacs
     All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
@@ -38,7 +38,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     All your files must be executable
     The length of your files will be tested using wc
 
-*Python Test Cases*
+### Python Test Cases
 
     Allowed editors: vi, vim, emacs
     All your files should end with a new line
@@ -50,7 +50,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
     We strongly encourage you to work together on test cases, so that you don’t miss any edge case – The Checker is checking for tests!
 
-**Tasks**
+## Tasks
 
 0. Integers addition
 
