@@ -34,4 +34,4 @@ def say_my_name(first_name, last_name=""):
 
     # print concatenated string
     print(f"My name is {first_name}" if not last_name 
-          else "My name is {first_name} {last_name}")
+          else f"My name is {first_name} {last_name}")
