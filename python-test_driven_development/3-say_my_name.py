@@ -30,7 +30,8 @@ def say_my_name(first_name, last_name=""):
     # no arguments
     if not isinstance(first_name, str) and not isinstance(last_name, str):
         raise TypeError(
-            "say_my_name() missing 1 required positional argument: 'first_name'")
+            "say_my_name() missing 1 required positional"
+             " argument: 'first_name'")
 
     # print concatenated string
-    print ("My name is {} {}".format(first_name, last_name))
+    print("My name is {} {}".format(first_name, last_name))
