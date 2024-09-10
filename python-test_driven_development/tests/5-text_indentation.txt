@@ -1,7 +1,7 @@
 # 5-text_indentation DocTest
 
 # Function: text_indentation()
->>>text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
 # Standard case
 >>> text_indentation('Cash. Rules. Everything. Around. Me: CREAM.')
