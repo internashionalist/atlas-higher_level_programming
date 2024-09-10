@@ -1,1 +1,38 @@
 # 5-text_indentation DocTest
+
+# Function: text_indentation()
+text_indentation = __import__('5-text_indentation').text_indentation
+
+# Standard case
+>>> text_indentation('Cash. Rules. Everything. Around. Me: CREAM.')
+Cash.
+<BLANKLINE>
+Rules.
+<BLANKLINE>
+Everything.
+<BLANKLINE>
+Around.
+<BLANKLINE>
+Me:
+<BLANKLINE>
+CREAM.
+<BLANKLINE>
+
+# Missing text
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+# Text not a string
+>>> text_indentation('777')
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+# Multiple spaces after punctuation
+>>> text_indentation('Get the money.     Dollar dollar bill yall.)
+Get the money.
+<BLANKLINE>
+Dollar dollar bill yall.
+<BLANKLINE>
