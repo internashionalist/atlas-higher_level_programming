@@ -10,6 +10,10 @@ class Rectangle:
     Defines Rectangle object
 
     Attributes:
+        number_of_instances (int):  number of instances of Rectangle
+        print_symbol (str):         symbol used to print rectangle
+
+    Parameters:
         width (int):    width of the rectangle
         height (int):   height of the rectangle
 
@@ -129,3 +133,17 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """
+        Returns biggest rectangle based on area
+        (rect_1 if both are equal)
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
