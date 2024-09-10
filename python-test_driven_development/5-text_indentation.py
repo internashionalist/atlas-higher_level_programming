@@ -34,6 +34,6 @@ def text_indentation(text):
             while i < len(text) and text[i] == " ":  # skip spaces
                 i += 1  # move to next character
             continue
-        i += 1 # move to next character
+        i += 1  # move to next character
 
     print(result, end="")  # print resulting text and pray
