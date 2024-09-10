@@ -21,6 +21,7 @@ class Rectangle:
         Area and perimeter of rectangle
         Prints rectangle using '#'
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -35,6 +36,7 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
 
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -52,8 +54,21 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__width + self.__height)
+        
+    def print(self):
+        """
+        Prints the rectangle using '#'
+        """
+        if self.__width > 0 and self.__height > 0:
+            for height in range(self.__height):
+                for width in range(self.__width):
+                    print("#", end="")
+                print()
 
     def __str__(self):
+        """
+        Returns the rectangle using '#'
+        """
         if self.__width > 0 and self.__height > 0:
             string = ""
             for height in range(self.__height):
@@ -66,9 +81,15 @@ class Rectangle:
             return ""
 
     def __repr__(self):
+        """
+        Returns the representation of the rectangle
+        """
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
+        """
+        Deletes the rectangle
+        """
         print("Bye rectangle...")
 
     @property
