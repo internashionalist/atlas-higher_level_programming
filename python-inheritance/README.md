@@ -1,6 +1,6 @@
-## Python - Inheritance
+# Python - Inheritance
 
-# General
+## General
     What is a superclass, baseclass or parentclass
     What is a subclass
     How to list all attributes and methods of a class or instance
@@ -13,7 +13,7 @@
     What is the purpose of inheritance
     What are, when and how to use isinstance, issubclass, type and super built-in functions
 
-# Requirements
+## Requirements
 
 *Python Scripts*
 
@@ -43,7 +43,7 @@
 
     Do not use the words import or from inside your comments, the checker will think you are trying to import some modules
 
-# Tasks
+## Tasks
 
 0. Lookup
 
