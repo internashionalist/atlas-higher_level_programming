@@ -39,7 +39,7 @@ class Rectangle(BaseGeometry):
             Area of rectangle
         """
         return self.__width * self.__height
-    
+
     def __str__(self):
         """
         Uses __str__ for string representation of rectangle
