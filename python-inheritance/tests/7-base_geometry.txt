@@ -42,3 +42,38 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
+
+# case with incomplete tuple
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", (4,))
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# case with whatever this is
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", [3])
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# case with bool
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# case with tuple
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+# case with None
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
