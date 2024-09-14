@@ -23,6 +23,4 @@ class MyList(list):
         """
         Prints list in ascending order using sorted()
         """
-        sorted_list = sorted(self)  # sorted() returns a new list
         print(sorted(self))  # print the new list
-        return sorted_list  # return the new list
