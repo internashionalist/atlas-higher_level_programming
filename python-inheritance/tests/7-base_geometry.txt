@@ -1,2 +1,18 @@
 # DocTest for 7-base_geometry
 
+# Import module
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+# check area()
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+# check integer_validator
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
