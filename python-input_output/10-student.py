@@ -36,4 +36,9 @@ class Student:
         """
         if attrs is None:  # if no attributes specified, return all
             return self.__dict__
-
+        else:
+            new_dict = {}  # create new dictionary
+            for key, value in self.__dict__.items():  # iterate through dict
+                if key in attrs:  # if key in attrs
+                    new_dict[key] = value  # add to new_dict
+            return new_dict  # return new_dict
