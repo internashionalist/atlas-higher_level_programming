@@ -1,0 +1,35 @@
+# DocTest for 1-mylist
+
+# Import module
+>>> MyList = __import__('1-my_list').MyList
+
+# If list is empty
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
+[]
+
+# Only one item
+>>> my_list = MyList([1])
+>>> my_list.print_sorted()
+[1]
+
+# list of tuple items
+>>> my_list = MyList([(4, 2), (1, 2)])
+>>> my_list.print_sorted()
+[(1, 2), (4, 2)]
+
+# list of string items
+>>> my_list = MyList(['alpha', 'charlie', 'bravo'])
+>>> my_list.print_sorted()
+['alpha', 'bravo', 'charlie']
+
+# float and integer items
+>>> my_list = MyList([10, 4.5, 2, 10.1])
+>>> my_list.print_sorted()
+[2, 4.5, 10, 10.1]
+
+# with appended items
+>>> my_list = MyList([2, 4, 6, 8])
+>>> my_list.append(5.5)
+>>> my_list.print_sorted()
+[2, 4, 5.5, 6, 8]
