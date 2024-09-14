@@ -40,7 +40,7 @@
 '[2, 4, 6]'
 
 # new list print
->>> my_list = MyList([2, 6, 4])
+>>> my_list = MyList([2, 4, 6])
 >>> my_list.print_sorted()
 [2, 4, 6]
 >>> print(my_list)
