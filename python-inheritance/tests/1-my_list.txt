@@ -38,3 +38,10 @@
 >>> my_list = MyList([2, 4, 6])
 >>> str(my_list)
 '[2, 4, 6]'
+
+# new list print
+>>> my_list = MyList([2, 4, 6])
+>>> my_list.print_sorted()
+[2, 4, 6]
+>>> print(my_list)
+[2, 4, 6]
