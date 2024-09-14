@@ -34,4 +34,3 @@ class Square(Rectangle):
             Area of square
         """
         return self.__size ** 2
-    
