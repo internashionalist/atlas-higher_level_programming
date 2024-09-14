@@ -23,7 +23,4 @@ class MyList(list):
         """
         Prints list in ascending order using sorted()
         """
-        list_copy = self.copy()
-        list_copy.sort()
-        print(list_copy)
-        return list_copy
+        print(sorted(self))  # print the new list
