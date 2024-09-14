@@ -6,7 +6,7 @@ Module for class_to_json
 
 def class_to_json(obj):
     """
-    Function returns dictionary description with simple data structure
+    Returns dictionary description with simple data structure
     (list, dictionary, string, integer and boolean)
     for JSON serialization of an object
 
@@ -16,4 +16,4 @@ def class_to_json(obj):
     Returns:
         dict: dictionary representation of object
     """
-    return obj.__dict__
+    return obj.__dict__  # is it that simple?
