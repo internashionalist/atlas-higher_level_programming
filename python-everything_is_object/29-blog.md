@@ -1,6 +1,6 @@
 # To Mute, or Not to Mute: Understanding Mutable and Immutable Objects in Python
 
-![Immutable and Mutable Objects](https://github.com/internashionalist/atlas-higher_level_programming/blob/main/python-everything_is_object/mutable2.jpg)
+![Immutable and Mutable Objects](https://github.com/internashionalist/atlas-higher_level_programming/blob/main/python-everything_is_object/mutable2.png)
 
 
 ### Introduction
