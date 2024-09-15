@@ -1,13 +1,13 @@
-# To Mute, or Not to Mute: Understanding Mutable and Immutable Objects in Python
+# To Mute, or Not to Mute: Immutable and Mutable Objects in Python
 
 ![Immutable and Mutable Objects](https://github.com/internashionalist/atlas-higher_level_programming/blob/main/python-everything_is_object/mutable2.png)
 
 
-### Introduction
+## Introduction
 Among the many glorious characteristics of Python is the distinction between “mutable” and “immutable” objects. It may be easy to overlook these words when one is simply trying to beat a checker, but it’s essential to fully understand what they mean if you want to beat the checkers down the line. Today, we’ll break down these concepts with a focus on just how Python treats them passing arguments to functions and, hopefully, have a better understanding of what the checkers of the future will want from you.
 
 
-### ID and Type in Python
+## ID and Type in Python
 To begin - every object in Python has both an ID and a type. The ID points to a location in memory where the object is stored. You can easily check the ID and type of an object using the ‘id()’ and ‘type()’ functions, respectively. These attributes help Python manage object identity and type consistency. We’ll get into how they help you in a moment.
 
 ```python
@@ -39,7 +39,7 @@ print(id(b))  # ID of b (same as a)
 Here, ‘a’ and ‘b’ both point to the same memory location, as Python optimizes memory by reusing the same object if the value is identical. Changes to mutable objects can affect all variables referring to the same object, while immutable objects behave differently.
 
 
-### Mutable Objects
+## Mutable Objects
 Mutable objects can change (mutate) their state or contents after creation. Lists and dictionaries are typical examples of mutable objects in Python. When you modify a mutable object, like appending an element to a list, it changes the object’s state without creating a new object. 
 
 ```python
@@ -52,7 +52,7 @@ print(id(my_list))  # same ID, list changed
 The ID remains the same because the list is mutable, and its content can change without changing the object itself.
 
 
-### Immutable Objects
+## Immutable Objects
 On the other hand, immutable objects cannot be changed after they are created. This includes types like integers, strings, and tuples. Any operation that alters an immutable object creates a new object with a different ID.
 
 ```python
@@ -64,7 +64,7 @@ print(id(my_string))  # new ID, since strings are immutable
 
 Even though ‘my_string’ was modified, Python created a new string object, leaving the original object unchanged.
 
-### Okay, So What?
+## Okay, So What?
 The difference between mutable and immutable objects becomes more and more important, especially when it comes to memory management and performance. Mutable objects can be updated in-place, which is more efficient, while immutable objects require creating new instances for every change, which can lead to higher memory usage.
 
 Python handles mutable and immutable objects differently in terms of memory and references. This distinction plays a role in how variables point to objects in memory and can lead to unexpected behavior if not carefully managed.
@@ -95,5 +95,5 @@ print(my_string)  # still "greetings"
 Since strings are immutable, the function ‘modify_string’ does not affect the original string, and a new object is created instead.
 
 
-### Conclusion
+## Conclusion
 Beating the checker now is all well and good, but understanding mutable and immutable objects in full will help you actually write efficient code when there’s no checker to beat. Whether you're creating simple list copies or managing complex data structures, this foundational knowledge is key. Grab that Python by the tail NOW before the other end bites YOU.
