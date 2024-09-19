@@ -43,7 +43,7 @@ class Rectangle(Base):
         stringRec = f"[Rectangle] ({self.id})"
         stringRec += f" {self.x}/{self.y} - {self.width}/{self.height}"
         return stringRec
-    
+
     def update(self, *args):
         """
         This method assigns an argument to each attribute.
