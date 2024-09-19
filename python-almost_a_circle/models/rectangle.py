@@ -41,7 +41,7 @@ class Rectangle(Base):
             stringRec: string representation of Rectangle
         """
         stringRec = f"[Rectangle] ({self.id})"
-        stringRec += f" ({self.x}/{self.y}) - ({self.width}/{self.height})"
+        stringRec += f" {self.x}/{self.y} - {self.width}/{self.height}"
         return stringRec
 
     @property  # getter for width
