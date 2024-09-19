@@ -32,3 +32,27 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    @property  # getter for width
+    def width(self):
+        return self.__width
+
+    @width.setter  # setter for width with validation
+    def width(self, value):
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+
+    @property  # getter for height
+    def height(self):
+        return self.__height
+    
+    @height.setter  # setter for height with validation
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
