@@ -97,5 +97,5 @@ class Rectangle(Base):
         for row in range(self.y):  # print newlines for y
             print()
         for row in range(self.height):  # print rows of #
-            print (" " * self.x, end="")
+            print(" " * self.x, end="")
             print("#" * self.width)
