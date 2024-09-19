@@ -44,21 +44,29 @@ class Rectangle(Base):
         stringRec += f" {self.x}/{self.y} - {self.width}/{self.height}"
         return stringRec
 
-    def update(self, *args):
+    def update(self, *args **kwargs):
         """
-        This method assigns an argument to each attribute.
+        This method updates the attributes of the Rectangle
+
+        Attributes:
+            *args: list of arguments
+                0: id
+                1: width
+                2: height
+                3: x
+                4: y
+            **kwargs: key/value pairs of attributes
         """
-        for i, arg in enumerate(args):
-            if i == 0:
-                self.id = arg
-            if i == 1:
-                self.width = arg
-            if i == 2:
-                self.height = arg
-            if i == 3:
-                self.x = arg
-            if i == 4:
-                self.y = arg
+        attributes = ["id", "width", "height", "x", "y"]
+
+        if args:
+            for i, arg in enumerate(args):
+                if i < len(attributes):
+                    setattr(self, attributes[i], arg)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     @property  # getter for width
     def width(self):
