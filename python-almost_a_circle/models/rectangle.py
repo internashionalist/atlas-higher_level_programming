@@ -134,3 +134,18 @@ class Rectangle(Base):
         for row in range(self.height):  # print rows of #
             print(" " * self.x, end="")
             print("#" * self.width)
+
+    def to_dictionary(self):
+        """
+        This method returns the dictionary representation of a Rectangle
+
+        Returns:
+            dict: dictionary representation of Rectangle
+        """
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
