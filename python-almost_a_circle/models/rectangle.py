@@ -44,7 +44,7 @@ class Rectangle(Base):
         stringRec += f" {self.x}/{self.y} - {self.width}/{self.height}"
         return stringRec
 
-    def update(self, *args **kwargs):
+    def update(self, *args, **kwargs):
         """
         This method updates the attributes of the Rectangle
 
