@@ -56,3 +56,27 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
+
+    @property  # getter for x
+    def x(self):
+        return self.__x
+    
+    @x.setter  # setter for x with validation
+    def x(self, value):
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+
+    @property  # getter for y
+    def y(self):
+        return self.__y
+
+    @y.setter  # setter for y with validation
+    def y(self, value):
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
