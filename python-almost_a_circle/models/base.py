@@ -66,3 +66,20 @@ class Base:
                 json_lists.append(obj.to_dictionary())  # append to list
         with open(filename, "w") as f:  # open in write mode
             f.write(cls.to_json_string(json_lists))  # write to file
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        This method returns the list of JSON string
+        representation json_string
+
+        Attributes:
+            json_string: JSON string representation
+
+        Returns:
+            string representation of list of dictionaries
+        """
+        if json_string:  # if json_string exists and is not empty
+            return json.loads(json_string)  # return list of dictionaries
+        else:
+            return []  # if empty or missing, return empty list
