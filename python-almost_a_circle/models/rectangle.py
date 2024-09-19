@@ -33,6 +33,17 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):  # overriding __str__ method
+        """
+        This method overrides the __str__ method to return a string
+
+        Returns:
+            stringRec: string representation of Rectangle
+        """
+        stringRec = f"[Rectangle] ({self.id})"
+        stringRec += f" ({self.x}/{self.y}) - ({self.width}/{self.height})"
+        return stringRec
+
     @property  # getter for width
     def width(self):
         return self.__width
