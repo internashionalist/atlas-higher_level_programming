@@ -48,7 +48,7 @@ class Rectangle(Base):
     @property  # getter for height
     def height(self):
         return self.__height
-    
+
     @height.setter  # setter for height with validation
     def height(self, value):
         if not isinstance(value, int):
@@ -60,7 +60,7 @@ class Rectangle(Base):
     @property  # getter for x
     def x(self):
         return self.__x
-    
+
     @x.setter  # setter for x with validation
     def x(self, value):
         if not isinstance(value, int):
