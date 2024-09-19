@@ -89,3 +89,13 @@ class Rectangle(Base):
             int: area of the rectangle
         """
         return self.width * self.height
+
+    def display(self):
+        """
+        This method prints the rectangle with # characters.
+        """
+        for row in range(self.y):  # print newlines for y
+            print()
+        for row in range(self.height):  # print rows of #
+            print (" " * self.x, end="")
+            print("#" * self.width)
