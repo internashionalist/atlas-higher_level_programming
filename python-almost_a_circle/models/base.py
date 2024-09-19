@@ -101,7 +101,7 @@ class Base:
             dummy_inst = cls(1)  # create dummy - default 1x1
         dummy_inst.update(**dictionary)  # update w dict attributes
         return dummy_inst  # return new instance
-    
+
     @classmethod
     def load_from_file(cls):
         """
@@ -118,5 +118,5 @@ class Base:
             for json_dict in json_lists:  # iterate through list
                 inst_list.append(cls.create(**json_dict))  # append instances
         else:  # if file does not exist
-            pass  # 
+            pass
         return inst_list  # return list of instances (empty if no file)
