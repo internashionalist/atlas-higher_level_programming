@@ -43,6 +43,22 @@ class Rectangle(Base):
         stringRec = f"[Rectangle] ({self.id})"
         stringRec += f" {self.x}/{self.y} - {self.width}/{self.height}"
         return stringRec
+    
+    def update(self, *args):
+        """
+        This method assigns an argument to each attribute.
+        """
+        for i, arg in enumerate(args):
+            if i == 0:
+                self.id = arg
+            if i == 1:
+                self.width = arg
+            if i == 2:
+                self.height = arg
+            if i == 3:
+                self.x = arg
+            if i == 4:
+                self.y = arg
 
     @property  # getter for width
     def width(self):
