@@ -145,4 +145,4 @@ class TestRectangle(unittest.TestCase):
         """
         rectangle = Rectangle(2, 4, 6, 8, 1)
         rectangle.update(width=1, height=2, x=3, y=4, id=89)
-        self.assertEqual(str(rectangle), "[Rectangle] (1) 6/8 - 1/2")
+        self.assertEqual(str(rectangle), "[Rectangle] (89) 3/4 - 1/2")
