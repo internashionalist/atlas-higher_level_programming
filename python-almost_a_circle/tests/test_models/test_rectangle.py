@@ -7,6 +7,8 @@ import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+from io import StringIO
+from unittest.mock import patch, MagicMock
 
 
 class TestRectangle(unittest.TestCase):
@@ -92,6 +94,15 @@ class TestRectangle(unittest.TestCase):
         """
         rectangle = Rectangle(2, 4, 6, 8, 1)
         self.assertEqual(str(rectangle), "[Rectangle] (1) 6/8 - 2/4")
+
+    def test_display(self):
+        """
+        Test display method
+        """
+        rectangle = Rectangle(2, 4)
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            rectangle.display()
+            self.assertEqual(fake_out.getvalue(), "##\n##\n##\n##\n")
 
     def test_to_dictionary(self):
         """
