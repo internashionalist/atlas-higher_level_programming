@@ -47,3 +47,9 @@ class TestBase(unittest.TestCase):
         Test to_json_string with None
         """
         self.assertEqual(Base.to_json_string(None), "[]")
+
+    def test_to_json_string_empty(self):
+        """
+        Test to_json_string with empty list
+        """
+        self.assertEqual(Base.to_json_string([]), "[]")
