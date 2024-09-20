@@ -120,3 +120,21 @@ class TestSquare(unittest.TestCase):
         square_dict = square.to_dictionary()
         new_square = Square.create(**square_dict)
         self.assertEqual(new_square.__str__(), "[Square] (89) 2/3 - 1")
+
+    def test_save_to_file(self):
+        """
+        Test save_to_file method
+        """
+        square = Square(2, 4, 6, 1)
+        Square.save_to_file([square])
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(),
+                            '[{"id": 1, "size": 2, "x": 4, "y": 6}]\n')
+            
+    def test_save_to_file_empty(self):
+        """
+        Test save_to_file method with empty list
+        """
+        Square.save_to_file([])
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]\n")
