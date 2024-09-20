@@ -98,4 +98,5 @@ class TestRectangle(unittest.TestCase):
         Test display method
         """
         rectangle = Rectangle(2, 4)
-        rectangle.display()
+        rectangle.display() 
+
