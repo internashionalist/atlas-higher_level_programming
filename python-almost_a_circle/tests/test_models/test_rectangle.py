@@ -17,8 +17,9 @@ class TestRectangle(unittest.TestCase):
         """
         Test valid attributes
         """
-        rectangle = Rectangle(2, 4, 6, 8)
+        rectangle = Rectangle(2, 4, 6, 8, 1)
         self.assertEqual(rectangle.width, 2)
         self.assertEqual(rectangle.height, 4)
         self.assertEqual(rectangle.x, 6)
         self.assertEqual(rectangle.y, 8)
+        self.assertEqual(rectangle.id, 1)
