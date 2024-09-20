@@ -61,12 +61,11 @@ class Base:
         """
         filename = cls.__name__ + ".json"  # filename is class name + .json
         json_lists = []  # list to store JSON strings
+        if list_objs:  # if not empty
+            for obj in list_objs:  # iterate through list
+                json_lists.append(obj.to_dictionary())  # append to list
         with open(filename, "w") as f:  # open in write mode
-            if list_objs is None or len(list_objs) == 0:
-                f.write("[]")
-            else:
-                json_lists = [obj.to_dictionary() for obj in list_objs]
-                f.write(cls.to_json_string(json_lists))
+            f.write(cls.to_json_string(json_lists))  # write to file
 
     @staticmethod
     def from_json_string(json_string):
@@ -118,6 +117,4 @@ class Base:
                 json_lists = cls.from_json_string(f.read())  # read JSON string
             for json_dict in json_lists:  # iterate through list
                 inst_list.append(cls.create(**json_dict))  # append instances
-        else:  # if file does not exist
-            pass
         return inst_list  # return list of instances (empty if no file)
