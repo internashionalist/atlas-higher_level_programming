@@ -2,6 +2,7 @@
 """
 UnitTests for Base
 """
+import os
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
@@ -12,7 +13,6 @@ class TestBase(unittest.TestCase):
     """
     TestBase class
     """
-
     def test_id(self):
         """
         Method to test id
