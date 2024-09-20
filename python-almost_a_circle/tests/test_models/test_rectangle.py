@@ -93,11 +93,11 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(2, 4, 6, 8, 1)
         self.assertEqual(str(rectangle), "[Rectangle] (1) 6/8 - 2/4")
 
-    def test_display(self):
+    def test_to_dictionary(self):
         """
-        Test display method
+        Test to_dictionary method
         """
-        self.rectangle = Rectangle(2, 4, 6, 8, 1)
-        self.rectangle.display()
-        self.assertEqual(self.rectangle.display(), None)
+        rectangle = Rectangle(2, 4, 6, 8, 1)
+        self.assertEqual(rectangle.to_dictionary(), 
+                         {'x': 6, 'y': 8, 'id': 1, 'height': 4, 'width': 2})
 
