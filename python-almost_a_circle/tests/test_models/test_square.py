@@ -138,3 +138,28 @@ class TestSquare(unittest.TestCase):
         Square.save_to_file([])
         with open("Square.json", "r") as file:
             self.assertEqual(file.read(), "[]")
+
+    def test_save_to_file_None(self):
+        """
+        Test save_to_file method with None
+        """
+        Square.save_to_file(None)
+        with open("Square.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+    def test_load_from_file(self):
+        """
+        Test load_from_file method
+        """
+        square = Square(2, 4, 6, 1)
+        Square.save_to_file([square])
+        squares = Square.load_from_file()
+        self.assertEqual(square.__str__(), squares[0].__str__())
+
+    def test_load_from_file_Missing(self):
+        """
+        Test load_from_file method with missing file
+        """
+        if os.path.exists("Square.json"):
+            os.remove("Square.json")
+        self.assertEqual(Square.load_from_file(), [])
