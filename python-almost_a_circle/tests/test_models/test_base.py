@@ -27,3 +27,17 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b4.id, 12)
         b5 = Base()
         self.assertEqual(b5.id, 4)
+
+    def test_id_type(self):
+        """
+        Test id type
+        """
+        b1 = Base(1)
+        self.assertIsInstance(b1.id, int)
+
+    def test_id_assignment_string(self):
+        """
+        Test id assignment with string
+        """
+        b1 = Base("string")
+        self.assertEqual(b1.id, "string")
