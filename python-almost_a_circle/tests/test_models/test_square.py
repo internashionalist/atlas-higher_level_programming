@@ -87,3 +87,36 @@ class TestSquare(unittest.TestCase):
         """
         square = Square(2, 4, 6, 1)
         self.assertEqual(square.__str__(), "[Square] (1) 4/6 - 2")
+
+    def test_to_dictionary(self):
+        """
+        Test to_dictionary method
+        """
+        square = Square(2, 4, 6, 1)
+        square_dict = square.to_dictionary()
+        self.assertEqual(square_dict, {"id": 1, "size": 2, "x": 4, "y": 6})
+
+    def test_update(self):
+        """
+        Test update method
+        """
+        square = Square(2, 4, 6, 1)
+        square.update(89, 1, 2, 3)
+        self.assertEqual(square.__str__(), "[Square] (89) 2/3 - 1")
+
+    def test_update_kwargs(self):
+        """
+        Test update method with kwargs
+        """
+        square = Square(2, 4, 6, 1)
+        square.update(id=89, size=1, x=2, y=3)
+        self.assertEqual(square.__str__() , "[Square] (89) 2/3 - 1")
+
+    def test_create(self):
+        """
+        Test create method
+        """
+        square = Square(1, 2, 3, 89)
+        square_dict = square.to_dictionary()
+        new_square = Square.create(**square_dict)
+        self.assertEqual(new_square.__str__(), "[Square] (89) 2/3 - 1")
