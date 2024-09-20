@@ -123,3 +123,26 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.to_dictionary(), 
                          {'x': 6, 'y': 8, 'id': 1, 'height': 4, 'width': 2})
 
+    def test_update(self):
+        """
+        Test update method
+        """
+        rectangle = Rectangle(2, 4, 6, 8, 1)
+        rectangle.update(1, 3, 5, 7, 10)
+        self.assertEqual(str(rectangle), "[Rectangle] (1) 7/10 - 3/5")
+
+    def test_update_checker(self):
+        """
+        Test update method with what the checker is looking for
+        """
+        rectangle = Rectangle(2, 4, 6, 8, 1)
+        rectangle.update(89, 1, 2, 3, 4)
+        self.assertEqual(str(rectangle), "[Rectangle] (89) 3/4 - 1/2")
+
+    def test_update_kwargs(self):
+        """
+        Test update method with kwargs
+        """
+        rectangle = Rectangle(2, 4, 6, 8, 1)
+        rectangle.update(width=1, height=2, x=3, y=4, id=89)
+        self.assertEqual(str(rectangle), "[Rectangle] (1) 6/8 - 1/2")
