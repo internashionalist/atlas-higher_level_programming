@@ -170,10 +170,8 @@ class TestRectangle(unittest.TestCase):
         Test save_to_file method with empty list
         """
         Rectangle.save_to_file([])
-        objs = Rectangle.load_from_file()
-        self.assertEqual(len(objs), 0)
-        self.assertIsInstance(objs, list)
-
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
 
     def test_save_to_file_None(self):
         """
