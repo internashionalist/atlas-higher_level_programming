@@ -180,3 +180,12 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as file:
             self.assertEqual(file.read(), "[]")
+
+    def test_load_from_file(self):
+        """
+        Test load_from_file method
+        """
+        rectangle = Rectangle(1, 2)
+        Rectangle.save_to_file([rectangle])
+        rectangles = Rectangle.load_from_file()
+        self.assertEqual(str(rectangle), str(rectangles[0]))
