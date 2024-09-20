@@ -64,8 +64,6 @@ class Base:
         if list_objs:  # if not empty
             for obj in list_objs:  # iterate through list
                 json_lists.append(obj.to_dictionary())  # append to list
-        if list_objs is None or len(list_objs) == 0:  # if empty or missing
-            f.write("[]")  # write empty list
         with open(filename, "w") as f:  # open in write mode
             f.write(cls.to_json_string(json_lists))  # write to file
 
