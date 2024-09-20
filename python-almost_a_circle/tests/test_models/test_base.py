@@ -13,11 +13,10 @@ class TestBase(unittest.TestCase):
     """
     TestBase class
     """
-    def test_id(self):
+    def test_id_assignment(self):
         """
-        Method to test id
+        Test id assignment
         """
-        Base._Base__nb_objects = 0
         b1 = Base()
         self.assertEqual(b1.id, 1)
         b2 = Base()
