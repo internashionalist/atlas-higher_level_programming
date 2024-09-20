@@ -60,12 +60,13 @@ class Base:
             None
         """
         filename = cls.__name__ + ".json"  # filename is class name + .json
-        json_lists = []  # list to store JSON strings
-        if list_objs:  # if not empty
-            for obj in list_objs:  # iterate through list
-                json_lists.append(obj.to_dictionary())  # append to list
-        with open(filename, "w") as f:  # open in write mode
-            f.write(cls.to_json_string(json_lists))  # write to file
+        if list_objs is None or list_objs == []:  # if empty or None
+            json_string = "[]"  # set JSON string to empty list
+        else:  # if list_objs exists and is not empty
+            json_string = cls.to_json_string(  # get JSON string
+                [obj.to_dictionary() for obj in list_objs])
+        with open(filename, "w") as f:  # open file in write mode
+            f.write(json_string)  # write JSON string to file
 
     @staticmethod
     def from_json_string(json_string):
