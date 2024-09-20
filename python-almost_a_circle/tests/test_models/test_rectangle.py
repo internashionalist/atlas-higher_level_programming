@@ -58,3 +58,23 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             Rectangle(2, 0, 6, 8)
+
+    def test_invalid_x(self):
+        """
+        Test invalid x cases - string, negative
+        """
+        with self.assertRaises(TypeError):
+            Rectangle(2, 4, "string", 8)
+
+        with self.assertRaises(ValueError):
+            Rectangle(2, 4, -10, 8)
+
+    def test_invalid_y(self):
+        """
+        Test invalid y cases - string, negative
+        """
+        with self.assertRaises(TypeError):
+            Rectangle(2, 4, 6, "string")
+
+        with self.assertRaises(ValueError):
+            Rectangle(2, 4, 6, -10)
