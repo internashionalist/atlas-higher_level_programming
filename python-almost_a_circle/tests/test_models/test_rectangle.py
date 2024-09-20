@@ -102,7 +102,18 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(2, 4)
         with patch('sys.stdout', new=StringIO()) as fake_out:
             rectangle.display()
-            self.assertEqual(fake_out.getvalue(), "##\n##\n##\n##\n")
+            self.assertEqual(fake_out.getvalue(), 
+                             "##\n##\n##\n##\n")
+
+    def test_display_xy(self):
+        """
+        Test display method with x and y
+        """
+        rectangle = Rectangle(2, 4, 2, 2)
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            rectangle.display()
+            self.assertEqual(fake_out.getvalue(), 
+                             "\n\n  ##\n  ##\n  ##\n  ##\n")
 
     def test_to_dictionary(self):
         """
