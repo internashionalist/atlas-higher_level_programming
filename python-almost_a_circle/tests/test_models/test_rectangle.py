@@ -97,6 +97,7 @@ class TestRectangle(unittest.TestCase):
         """
         Test display method
         """
-        rectangle = Rectangle(2, 4)
-        rectangle.display() 
+        self.rectangle = Rectangle(2, 4, 6, 8, 1)
+        self.rectangle.display()
+        self.assertEqual(self.rectangle.display(), None)
 
