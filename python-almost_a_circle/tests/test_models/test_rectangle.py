@@ -78,3 +78,10 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             Rectangle(2, 4, 6, -10)
+
+    def test_area(self):
+        """
+        Test area method
+        """
+        rectangle = Rectangle(2, 4)
+        self.assertEqual(rectangle.area(), 8)
