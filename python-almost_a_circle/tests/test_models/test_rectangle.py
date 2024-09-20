@@ -146,3 +146,37 @@ class TestRectangle(unittest.TestCase):
         rectangle = Rectangle(2, 4, 6, 8, 1)
         rectangle.update(width=1, height=2, x=3, y=4, id=89)
         self.assertEqual(str(rectangle), "[Rectangle] (89) 3/4 - 1/2")
+
+    def test_create(self):
+        """
+        Test create method
+        """
+        rectangle = Rectangle(89, 1, 2, 3, 4)
+        rectangle_dictionary = rectangle.to_dictionary()
+        rectangle2 = Rectangle.create(**rectangle_dictionary)
+        self.assertEqual(str(rectangle), str(rectangle2))
+
+    def test_save_to_file(self):
+        """
+        Test save_to_file method
+        """
+        rectangle = Rectangle(1, 2)
+        Rectangle.save_to_file([rectangle])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(len(file.read()), 52)
+    
+    def test_save_to_file_empty(self):
+        """
+        Test save_to_file method with empty list
+        """
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
+
+    def test_save_to_file_None(self):
+        """
+        Test save_to_file method with None
+        """
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(file.read(), "[]")
