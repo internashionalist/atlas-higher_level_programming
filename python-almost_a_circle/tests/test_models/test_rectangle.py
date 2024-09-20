@@ -32,6 +32,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.width, 1)
         self.assertEqual(rectangle.height, 2)
 
+
     def test_invalid_width(self):
         """
         Test invalid width cases - string, negative, zero
@@ -45,3 +46,15 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(0, 4, 6, 8)
 
+    def test_invalid_height(self):
+        """
+        Test invalid height cases - string, negative, zero
+        """
+        with self.assertRaises(TypeError):
+            Rectangle(2, "string", 6, 8)
+
+        with self.assertRaises(ValueError):
+            Rectangle(2, -10, 6, 8)
+
+        with self.assertRaises(ValueError):
+            Rectangle(2, 0, 6, 8)
