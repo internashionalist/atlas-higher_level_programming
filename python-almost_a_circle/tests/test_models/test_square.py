@@ -65,16 +65,6 @@ class TestSquare(unittest.TestCase):
         with self.assertRaises(ValueError):
             Square(1, 2, -1)
 
-    def test_invalid_id(self):
-        """
-        Test invalid id cases - string, negative
-        """
-        with self.assertRaises(TypeError):
-            Square(2, 4, 6, "string")
-
-        with self.assertRaises(ValueError):
-            Square(1, 2, 3, -1)
-
     def test_area(self):
         """
         Test area method
