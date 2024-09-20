@@ -24,6 +24,14 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle.y, 8)
         self.assertEqual(rectangle.id, 1)
 
+    def test_attribute_cases(self):
+        """
+        Test attribute cases
+        """
+        rectangle = Rectangle(1, 2)
+        self.assertEqual(rectangle.width, 1)
+        self.assertEqual(rectangle.height, 2)
+
     def test_invalid_width(self):
         """
         Test invalid width cases - string, negative, zero
