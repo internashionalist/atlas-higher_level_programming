@@ -15,19 +15,6 @@ class TestRectangle(unittest.TestCase):
     """
     TestRectangle class
     """
-    def setUp(self):
-        """
-        Reset the id counter
-        """
-        Base._Base__nb_objects = 0
-
-    def tearDown(self):
-        """
-        Clear the file created
-        """
-        if os.path.exists("Rectangle.json"):
-            os.remove("Rectangle.json")
-
     def test_valid_attributes(self):
         """
         Test valid attributes
