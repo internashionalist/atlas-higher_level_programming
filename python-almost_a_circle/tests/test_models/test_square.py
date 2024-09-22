@@ -136,8 +136,9 @@ class TestSquare(unittest.TestCase):
         Test save_to_file method with empty list
         """
         Square.save_to_file([])
-        with open("Square.json", "r") as file:
-            self.assertEqual(file.read(), "[]")
+        with open ("Square.json", 'r') as f:
+            content = f.read()
+            self.assertEqual(content, '[]')
 
     def test_save_to_file_None(self):
         """
