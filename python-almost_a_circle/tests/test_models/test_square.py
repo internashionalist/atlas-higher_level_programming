@@ -15,6 +15,20 @@ class TestSquare(unittest.TestCase):
     """
     TestSquare class
     """
+
+    def setUp(self):
+        """
+        Reset the id counter
+        """
+        Base._Base__nb_objects = 0
+
+    def tearDown(self):
+        """
+        Clear the file created
+        """
+        if os.path.exists("Square.json"):
+            os.remove("Square.json")
+
     def test_valid_attributes(self):
         """
         Test valid attributes
