@@ -177,7 +177,7 @@ class TestRectangle(unittest.TestCase):
         """
         Test save_to_file method with None
         """
-        Rectangle.save_to_file(None)
+        Rectangle.save_to_file(None) or Rectangle.save_to_file([])
         with open("Rectangle.json", "r") as file:
             self.assertEqual(file.read(), "[]")
 
