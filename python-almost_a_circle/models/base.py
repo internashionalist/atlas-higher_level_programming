@@ -63,7 +63,7 @@ class Base:
         if list_objs is None or list_objs == []:  # if empty or None
             json_string = "[]"  # set JSON string to empty list
         else:  # if list_objs exists and is not empty
-            json_string = cls.to_json_string(  # get JSON string
+            json_string = Base.to_json_string(  # get JSON string
                 [obj.to_dictionary() for obj in list_objs])
         with open(filename, "w") as file:  # open file in write mode
             file.write(json_string)  # write JSON string to file
