@@ -65,8 +65,8 @@ class Base:
         else:  # if list_objs exists and is not empty
             json_string = cls.to_json_string(  # get JSON string
                 [obj.to_dictionary() for obj in list_objs])
-        with open(filename, "w") as f:  # open file in write mode
-            f.write(json_string)  # write JSON string to file
+        with open(filename, "w") as file:  # open file in write mode
+            file.write(json_string)  # write JSON string to file
 
     @staticmethod
     def from_json_string(json_string):
