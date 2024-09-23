@@ -65,7 +65,7 @@ class Base:
             json_string = [
                 obj.to_dictionary() for obj in list_objs if obj]  # list
         with open(filename, "w") as file:  # open file in write mode
-            file.write(Base.to_json_string(json_string))  # write JSON string to file
+            file.write(Base.to_json_string(json_string))  # write string
 
     @staticmethod
     def from_json_string(json_string):
