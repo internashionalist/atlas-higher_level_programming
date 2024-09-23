@@ -63,7 +63,7 @@ class Base:
         json_string = []  # list to store JSON string
         if list_objs:  # if list_objs exists and is not empty
             json_string = [
-                obj.to_dictionary() for obj in list_objs if obj]  # list of dicts
+                obj.to_dictionary() for obj in list_objs if obj]  # list
         with open(filename, "w") as file:  # open file in write mode
             file.write(Base.to_json_string(json_string))  # write JSON string to file
 
