@@ -13,6 +13,14 @@ class TestBase(unittest.TestCase):
     """
     TestBase class
     """
+
+    def setUp(self):
+        Base._Base__nb_objects = 0
+
+    def tearDown(self):
+        if os.path.exists("Base.json"):
+            os.remove("Base.json")
+
     def test_id_assignment(self):
         """
         Test id assignment
