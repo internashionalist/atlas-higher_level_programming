@@ -42,10 +42,10 @@ class Base:
         Returns:
             JSON string representation of list_dictionaries
         """
-        if list_dictionaries:
-            return json.dumps(list_dictionaries)  # return JSON string
+        if list_dictionaries is None:  # if does not exist
+            return "[]"
         else:
-            return "[]"  # if empty or missing, return empty list
+            return json.dumps(list_dictionaries)  # return JSON string
 
     @classmethod
     def save_to_file(cls, list_objs):
