@@ -15,6 +15,14 @@ class TestRectangle(unittest.TestCase):
     """
     TestRectangle class
     """
+
+    def setUp(self):
+        Rectangle._Base__nb_objects = 0
+
+    def tearDown(self):
+        if os.path.exists("Rectangle.json"):
+            os.remove("Rectangle.json")
+
     def test_valid_attributes(self):
         """
         Test valid attributes
