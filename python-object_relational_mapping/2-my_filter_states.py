@@ -17,13 +17,12 @@ def search_states():
         user=sys.argv[1],
         passwd=sys.argv[2],
         db=sys.argv[3],
-        input=sys.argv[4]
     )
 
     cur = db.cursor()
     cur.execute(
         "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-        .format(input))
+        .format(sys.argv[4]))
 
     for row in cur.fetchall():
         print(row)
