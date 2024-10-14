@@ -21,7 +21,7 @@ def search_states():
 
     cur = db.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+        "SELECT * FROM states WHERE BINARY name LIKE '{}' ORDER BY id"
         .format(sys.argv[4]))
 
     for row in cur.fetchall():
