@@ -3,6 +3,7 @@
 This module contains the list_states function.
 """
 
+
 import MySQLdb
 import sys
 
@@ -10,7 +11,6 @@ import sys
 def list_states():
     """
     Function lists all states from database hbtn_0e_0_usa
-
     """
     db = MySQLdb.connect(
         host="localhost",
