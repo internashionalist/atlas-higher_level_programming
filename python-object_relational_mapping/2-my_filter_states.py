@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This function contains the search_states function.
+This module contains the search_states function.
 """
 
 import MySQLdb

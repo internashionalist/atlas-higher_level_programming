@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This function contains the list_N_states function.
+This module contains the list_N_states function.
 """
 
 import MySQLdb
