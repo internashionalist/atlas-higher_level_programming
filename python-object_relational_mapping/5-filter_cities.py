@@ -20,9 +20,12 @@ def filter_cities():
 
     cur = db.cursor()
     cur.execute(
-        "SELECT cities.name FROM cities INNER JOIN states ON \
-                cities.state_id = states.id WHERE states.name = %s \
-                ORDER BY cities.id ASC", (argv[4],)
+        "SELECT cities.name \
+            FROM cities \
+            INNER JOIN states \
+            ON cities.state_id = states.id \
+            WHERE states.name = %s \
+            ORDER BY cities.id ASC", (argv[4],)
     )
 
     print(", ".join([row[0] for row in cur.fetchall()]))
