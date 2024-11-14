@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const myVar = ["No argument", "Argument found", "Arguments found"];
+const myVar = ['No argument', 'Argument found', 'Arguments found'];
 
 if (process.argv.length > 1) {
     console.log(myVar[2]);
