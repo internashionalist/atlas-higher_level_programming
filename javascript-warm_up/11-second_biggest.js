@@ -10,5 +10,4 @@ function secondBiggest (numbers) {
   numbers.sort((a, b) => a - b);
   return numbers[numbers.length - 2];
 }
-
 console.log(secondBiggest(numbers));
