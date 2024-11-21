@@ -9,10 +9,10 @@ request(url, (error, response, body) => {
   const tasks = {};
   data.forEach(task => {
     if (task.completed === true) {
-      if (tasks[task.userID] === undefined) {
-        tasks[task.userID] = 1;
+      if (tasks[task.userId] === undefined) {
+        tasks[task.userId] = 1;
       } else {
-        tasks[task.userID]++;
+        tasks[task.userId]++;
       }
     }
   });
