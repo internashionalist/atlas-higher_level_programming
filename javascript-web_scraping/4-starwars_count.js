@@ -10,7 +10,7 @@ request(url + charID, (error, response, body) => {
   const films = data.results;
   let count = 0;
   films.forEach(film => {
-    if (film.characters.some(char => char.includes(/${charID}/)) {
+    if (film.characters.some(char => char.includes(/${charID}/))) {
       count++;
     }
   });
