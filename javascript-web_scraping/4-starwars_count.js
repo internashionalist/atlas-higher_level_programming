@@ -4,7 +4,7 @@ const request = require('request');
 const charID = '18';
 const url = process.argv[2];
 
-request(url + charID, (error, response, body) => {
+request(url, (error, response, body) => {
   if (error) throw error;
   const data = JSON.parse(body);
   const films = data.results;
